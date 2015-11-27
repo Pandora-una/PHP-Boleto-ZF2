@@ -14,7 +14,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "dino/dompdf-module": ">=0.*"
+        "dino/dompdf-module": ">=0.1"
     },
     "autoload": {
         "psr-0": {
