@@ -41,7 +41,7 @@ class Bradesco extends AbstractBoletoFactory
         /**
          * Compondo o Nosso Número e seu dígito verificador
          */
-        $nossoNumeroProcessado = \str_pad($this->getBanco()->getCarteira(), 2, '0', STR_PAD_LEFT);
+        $nossoNumeroProcessado = \str_pad($this->getCedente()->getCarteira(), 2, '0', STR_PAD_LEFT);
         $nossoNumeroProcessado .= \str_pad($this->getBoleto()->getNossoNumero(), 11, '0', STR_PAD_LEFT);
         $nossoNumeroDV = Util::digitoVerificadorNossoNumero($nossoNumeroProcessado, 7);
 
