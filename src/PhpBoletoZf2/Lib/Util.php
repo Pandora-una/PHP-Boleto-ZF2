@@ -121,7 +121,14 @@ abstract class Util
             $ano = $data[2];
             $mes = $data[1];
             $dia = $data[0];
-            return(abs((self::dataParaDias("1997", "10", "07")) - (self::dataParaDias($ano, $mes, $dia))));
+
+            $fator = abs((self::dataParaDias("1997", "10", "07")) - (self::dataParaDias($ano, $mes, $dia)));
+
+            if ($fator > 9999) {
+                $fator = ($fator % 10000) + 1000;
+            }
+
+            return $fator;
         } else {
             return "0000";
         }
